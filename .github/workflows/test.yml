@@ -35,6 +35,8 @@ jobs:
       - run: go build -v .
       - run: make dep
       - run: make test-setup
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
       - run: make test
 
       - name: Upload coverage report
