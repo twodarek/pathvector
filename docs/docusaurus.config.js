@@ -134,7 +134,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/natesales/pathvector/edit/main/docs/',
+          editUrl: 'https://github.com/twodarek/pathvector/edit/main/docs/',
         },
         blog: false,
         theme: {
@@ -180,7 +180,7 @@ const config = {
                 label: 'Configuration',
             },
             {
-                href: 'https://github.com/natesales/pathvector',
+                href: 'https://github.com/twodarek/pathvector',
                 label: 'GitHub',
                 position: 'right',
             },
