@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"context"
 	"os"
 	"path/filepath"
 	"strings"
@@ -24,7 +25,7 @@ func TestOptimizer(t *testing.T) {
 			"--config", testFile,
 		}...))
 		t.Logf("Running pre-optimizer generate: %v", args)
-		assert.Nil(t, rootCmd.Execute())
+		assert.Nil(t, rootCmd.ExecuteContext(context.Background()))
 
 		args = append(args, []string{
 			"optimizer",
@@ -37,7 +38,7 @@ func TestOptimizer(t *testing.T) {
 		// Check if local pref is lowered
 		checkFile, err := os.ReadFile("test-cache/AS65510_EXAMPLE.conf")
 		assert.Nil(t, err)
-		if !strings.Contains(string(checkFile), "bgp_local_pref = 100; # pathvector:localpref") {
+		if !strings.Contains(string(checkFile), "bgp_local_pref = 80; # pathvector:localpref") {
 			t.Errorf("expected bgp_local_pref = 80 but not found in file")
 		}
 	}
