@@ -11,7 +11,7 @@ import {DownloadForm} from "../src/components/DownloadForm";
 -->
 
 All versions of Pathvector for all supported platforms are available to download from the
-latest [release page](https://github.com/natesales/pathvector/releases).
+latest [release page](https://github.com/twodarek/pathvector/releases).
 
 It is recommended to run Pathvector every 12 hours to update IRR prefix lists and PeeringDB prefix limits.
 Adding `0 */12 * * * pathvector generate` to your crontab will update the filters at 12 AM and PM every day.
@@ -32,7 +32,7 @@ with [`0983 AC66 7B4F 0B54 F69D`](https://repo.pathvector.io/pgp.asc). Note that
 releases are not signed.
 
 Pathvector on Linux is available for amd64, aarch64, and mips64 as binaries and deb and rpm packages
-from [releases](https://github.com/natesales/pathvector/releases).
+from [releases](https://github.com/twodarek/pathvector/releases).
 
 ## Debian (Ubuntu, etc.)
 
@@ -61,7 +61,7 @@ TNSR is based on Ubuntu, see [Debian](#debian) for more information. Past TNSR v
 ## FreeBSD
 
 Pathvector is available as an amd64/aarch64 binary for FreeBSD from
-the [releases](https://github.com/natesales/pathvector/releases) page.
+the [releases](https://github.com/twodarek/pathvector/releases) page.
 
 ## Ubiquiti EdgeOS
 
@@ -73,7 +73,7 @@ Not Supported (MIPS1004Kc): ER-X, ER-X-SFP, ER-10X
 ## Arista EOS
 
 Pathvector can run on Arista switches by installing a SWIX (Switch Extension) file
-from [releases](https://github.com/natesales/pathvector/releases). First, copy the `pathvector-arista.swix` file
+from [releases](https://github.com/twodarek/pathvector/releases). First, copy the `pathvector-arista.swix` file
 to `/mnt/flash/` on your switch.
 
 From the EOS CLI:
@@ -126,6 +126,6 @@ the [many supported Go platforms](https://github.com/golang/go/blob/master/src/g
 For example, to build Pathvector for M1 Macs:
 
 ```bash
-git clone https://github.com/natesales/pathvector && cd pathvector
+git clone https://github.com/twodarek/pathvector && cd pathvector
 GOOS=darwin GOARCH=arm64 go build
 ```

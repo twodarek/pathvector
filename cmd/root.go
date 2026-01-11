@@ -6,9 +6,9 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 
-	"github.com/natesales/pathvector/pkg/config"
-	"github.com/natesales/pathvector/pkg/plugin"
-	"github.com/natesales/pathvector/pkg/process"
+	"github.com/twodarek/pathvector/pkg/config"
+	"github.com/twodarek/pathvector/pkg/plugin"
+	"github.com/twodarek/pathvector/pkg/process"
 )
 
 // These are set indirectly by the build process. The cmd.Execute() function takes these from the main package and sets them in this (cmd) package.
