@@ -11,9 +11,9 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 
-	"github.com/natesales/pathvector/pkg/bird"
-	"github.com/natesales/pathvector/pkg/templating"
-	"github.com/natesales/pathvector/pkg/util"
+	"github.com/twodarek/pathvector/pkg/bird"
+	"github.com/twodarek/pathvector/pkg/templating"
+	"github.com/twodarek/pathvector/pkg/util"
 )
 
 var (

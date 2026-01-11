@@ -12,8 +12,8 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/natesales/pathvector/pkg/config"
-	"github.com/natesales/pathvector/pkg/util"
+	"github.com/twodarek/pathvector/pkg/config"
+	"github.com/twodarek/pathvector/pkg/util"
 )
 
 var (
@@ -196,13 +196,13 @@ var funcMap = template.FuncMap{
 		protoName := fmt.Sprintf("%s_AS%d_v%s", *s, *asn, af)
 		i := 1
 		for {
+			protocolNameMapLock.Lock()
 			if !util.Contains(protocolNames, protoName) {
 				protocolNames = append(protocolNames, protoName)
 				var t []string
 				if tags != nil {
 					t = *tags
 				}
-				protocolNameMapLock.Lock()
 				protocolNameMap[protoName] = &Protocol{
 					Name: *userSuppliedName,
 					Tags: t,
@@ -210,6 +210,7 @@ var funcMap = template.FuncMap{
 				protocolNameMapLock.Unlock()
 				return protoName
 			}
+			protocolNameMapLock.Unlock()
 			protoName = fmt.Sprintf("%s_AS%d_v%s_%d", *s, *asn, af, i)
 			i++
 		}

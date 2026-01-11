@@ -13,9 +13,9 @@ import (
 	"github.com/go-ping/ping"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/natesales/pathvector/pkg/bird"
-	"github.com/natesales/pathvector/pkg/config"
-	"github.com/natesales/pathvector/pkg/util"
+	"github.com/twodarek/pathvector/pkg/bird"
+	"github.com/twodarek/pathvector/pkg/config"
+	"github.com/twodarek/pathvector/pkg/util"
 )
 
 // Delimiter is an arbitrary delimiter used to split ASN from peerName

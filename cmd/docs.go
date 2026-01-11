@@ -3,7 +3,7 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/natesales/pathvector/pkg/autodoc"
+	"github.com/twodarek/pathvector/pkg/autodoc"
 )
 
 func init() {
