@@ -23,6 +23,9 @@ vendorbuild/juniper/bird/.build/
 vendorbuild/juniper/bird/jetez/
 vendorbuild/cisco/ioxclient
 vendorbuild/mikrotik/docker-buildx
+vendorbuild/arista/*.rpm*
+vendorbuild/arista/manifest.txt
+vendorbuild/arista/*.swix
 
 # Testing
 test-cache/
