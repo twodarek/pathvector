@@ -15,4 +15,4 @@ wget https://kojipkgs.fedoraproject.org//packages/bird2/2.15.1/1.el7/x86_64/bird
 ls bird2*.rpm >> manifest.txt
 for f in bird2*.rpm; do echo "$f-sha1: $(sha1sum $f | cut -d " " -f 1)"; done >> manifest.txt
 
-zip pathvector-"$(git describe --tags "$(git rev-list --tags --max-count=1)" | cut -c2-)"-arista-amd64.swix manifest.txt pathvector*linux-amd64.rpm
+zip pathvector-"$(git describe --tags "$(git rev-list --tags --max-count=1)" | cut -c2-)"-arista-amd64.swix manifest.txt pathvector*linux-amd64.rpm bgpq4*.rpm bird2*.rpm
